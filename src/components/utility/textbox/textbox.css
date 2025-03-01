@@ -1,0 +1,60 @@
+.textbox-container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 1em;
+    padding: 1em;
+    box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 40em;
+    position: relative;
+}
+
+.textbox {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1em;
+    padding: 0.5em;
+    max-height: 7.5em; /* Maximum height for 5 lines */
+    overflow-y: auto; /* Enables scrolling after max height */
+}
+
+/* Buttons */
+.button-section {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 0.5em;
+}
+
+.option-btn {
+    background: white;
+    border: 0.1em solid #ccc;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    background: #f0f0f0;
+}
+
+/* Send Button */
+.send-btn {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    background: blue;
+    color: white;
+    border-radius: 2em;
+    padding: 0.5em 1.2em;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+}
+
+.send-btn:hover {
+    background: darkblue;
+}

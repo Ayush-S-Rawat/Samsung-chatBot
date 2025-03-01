@@ -1,0 +1,18 @@
+.chat-bubble {
+    max-width: 60%;
+    padding: 0.8em;
+    margin: 0.5em;
+    border-radius: 0.5em;
+}
+
+.query {
+    background-color: blue;
+    color: white;
+    align-self: flex-end;
+}
+
+.response {
+    background-color: red;
+    color: white;
+    align-self: flex-start;
+}

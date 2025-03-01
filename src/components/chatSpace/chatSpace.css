@@ -1,0 +1,22 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-end;
+    background: #f5f5f5;
+}
+
+.chattingSpace {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1em;
+}
+
+.textbox-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding: 1em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
