@@ -6,12 +6,12 @@ const Header = () => {
     <header className="header">
       {/* Left Section - Logo */}
       <div className="logo-container">
-        <img src={logo} alt="Company Logo" className="logo" />
+        <img src={logo} alt="Samsung Logo" className="logo" />
       </div>
       {/* Right Section - Buttons */}
       <div className="right-section">
-        <button className="login-btn">Log in</button>
-        <button className="signup-btn">Sign up</button>
+        <button className="login-btn" aria-label="Log in">Log in</button>
+        <button className="signup-btn" aria-label="Sign up">Sign up</button>
       </div>
     </header>
   );

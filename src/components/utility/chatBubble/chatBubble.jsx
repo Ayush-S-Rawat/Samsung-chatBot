@@ -1,4 +1,3 @@
-// ChatBubble.jsx
 import "./chatBubble.css";
 
 const ChatBubble = ({ text, type }) => {
