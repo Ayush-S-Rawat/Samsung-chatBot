@@ -17,8 +17,9 @@
     resize: none;
     font-size: 1em;
     padding: 0.5em;
-    max-height: 7.5em; /* Maximum height for 5 lines */
-    overflow-y: auto; /* Enables scrolling after max height */
+    line-height: 1.5; /* Ensures consistent line height */
+    overflow-y: hidden; /* Hide scrollbar when expanding */
+    max-height: 7.5em; /* Maximum height for 5 lines (1.5em line height * 5 lines) */
 }
 
 /* Buttons */
