@@ -9,15 +9,15 @@
 }
 
 .query {
-    background-color: blue;
-    color: white;
+    background-color: #DCD7C9;
+    color: #000;
     /* align-self: flex-end; */
     margin-left: auto; /* Pushes the bubble to the right */
 }
 
 .response {
-    background-color: red;
-    color: white;
+    background-color: #fff;
+    color: #000;
     /* align-self: flex-start; */
     margin-right: auto; /* Pushes the bubble to the left */
 }
