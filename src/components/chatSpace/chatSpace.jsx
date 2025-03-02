@@ -6,24 +6,13 @@ import "./chatSpace.css";
 const ChatSpace = () => {
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const chatContainerRef = useRef(null); // Ref for the chat container
+  const messagesEndRef = useRef(null); // Ref for the last message in the chat
 
-  // Function to scroll to the bottom of the chat container
-  const scrollToBottom = () => {
-    if (chatContainerRef.current) {
-      console.log("Scrolling to bottom..."); // Debugging
-      console.log("Scroll Height:", chatContainerRef.current.scrollHeight); // Debugging
-      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
-    }
-  };
-
-  // Scroll to bottom after a slight delay to ensure DOM updates
+  // Scroll to bottom whenever messages change
   useEffect(() => {
-    const timer = setTimeout(() => {
-      scrollToBottom();
-    }, 100); // 100ms delay to ensure DOM updates
-
-    return () => clearTimeout(timer); // Cleanup the timer
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   }, [messages]); // Dependency on `messages`
 
   const sendMessageToBackend = async (query) => {
@@ -52,13 +41,14 @@ const ChatSpace = () => {
 
   return (
     <div className="chat-container">
-      <div className="chattingSpace" ref={chatContainerRef}>
+      <div className="chattingSpace">
         {messages.map((msg, index) => (
           <ChatBubble key={index} text={msg.text} type={msg.type} />
         ))}
         {isLoading && (
           <div className="loading-spinner">Loading...</div>
         )}
+        <div ref={messagesEndRef} /> {/* Invisible div at the end of the chat */}
       </div>
       <TextBox onSendMessage={sendMessageToBackend} />
     </div>
