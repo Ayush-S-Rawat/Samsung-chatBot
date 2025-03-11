@@ -1,0 +1,33 @@
+.button {
+    font-size: 1em;
+    padding: 0.5em 1em; /* Adjust padding for better fit */
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0.5em;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap; /* Prevent text from wrapping */
+    flex-shrink: 0; /* Prevent button from shrinking */
+  }
+  
+  /* Primary Button (e.g., Login, Send) */
+  .button.primary {
+    background-color: #007bff; /* Black background */
+    color: #fff; /* White text */
+  }
+  
+  .button.primary:hover {
+    background-color: #0056b3; /* Dark gray on hover */
+  }
+  
+  /* Secondary Button (e.g., Signup) */
+  .button.secondary {
+    background-color: transparent;
+    border: 0.1em solid #0056b3; /* Black border */
+    color: #000; /* Black text */
+  }
+  
+  .button.secondary:hover {
+    background-color: #007bff; /* Black background on hover */
+    color: #fff; /* White text on hover */
+  }

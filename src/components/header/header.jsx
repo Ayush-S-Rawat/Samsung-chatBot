@@ -1,4 +1,6 @@
+import React from "react";
 import logo from "../../assets/images/samsung-logo.png";
+import Button from "../utility/button/button.jsx"; // Import the Button component
 import "./header.css";
 
 const Header = () => {
@@ -10,8 +12,8 @@ const Header = () => {
       </div>
       {/* Right Section - Buttons */}
       <div className="right-section">
-        <button className="login-btn" aria-label="Log in">Log in</button>
-        <button className="signup-btn" aria-label="Sign up">Sign up</button>
+        <Button text="Log in" type="primary" />
+        <Button text="Sign up" type="secondary" />
       </div>
     </header>
   );

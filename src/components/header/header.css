@@ -10,9 +10,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2em;
+  padding: 0 2em; /* Add padding to the sides */
   overflow: hidden;
-  box-sizing: border-box; /* Ensure padding doesn't add extra width */
+  box-sizing: border-box;
 }
 
 .logo-container {
@@ -29,74 +29,13 @@
 
 .right-section {
   display: flex;
-  gap: 0.8em;
-  flex-shrink: 0; /* Prevents shrinking */
+  gap: 0.8em; /* Space between buttons */
+  flex-shrink: 0; /* Prevent shrinking */
+  max-width: 50%; /* Limit the width of the right section */
+  overflow: hidden; /* Prevent overflow */
   white-space: nowrap; /* Prevents text wrapping */
 }
 
-.login-btn,
-.signup-btn {
-  font-size: 1em;
-  padding: 0.4em 0.9em;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 0.5em;
-  transition: all 0.3s ease-in-out;
-  white-space: nowrap;
-}
-
-.login-btn {
-  background-color: #2DAA9E;
-  color: #fff;
-}
-
-.signup-btn {
-  background-color: #2DAA9E;
-  color: #fff;
-}
-
-.login-btn:hover {
-  background-color: #66D2CE;
-}
-
-.signup-btn:hover {
-  background-color: #66D2CE;
-}
-
-/* Responsive Fix */
-@media (max-width: 48em) {
-  .header {
-    padding: 0 1em;
-  }
-
-  .logo {
-    height: 2em;
-  }
-
-  .login-btn,
-  .signup-btn {
-    font-size: 0.9em;
-    padding: 0.4em 0.8em;
-  }
-}
-
-@media (max-width: 30em) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5em;
-    padding: 0.5em;
-  }
-
-  .right-section {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .login-btn,
-  .signup-btn {
-    width: 100%; /* Make buttons occupy full width on smaller screens */
-    text-align: center;
-  }
+.right-section .button {
+  flex-shrink: 0; /* Prevent buttons from shrinking */
 }

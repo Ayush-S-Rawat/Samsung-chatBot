@@ -1,50 +1,37 @@
 .textbox-container {
   position: fixed;
-  bottom: 1em; /* Distance from the bottom */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust for exact centering */
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
   background: white;
   padding: 0.8em;
-  border-radius: 0.8em; /* Rounded corners */
+  border-radius: 0.8em;
   box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.1);
-  z-index: 2; /* Ensure textbox stays above chat bubbles */
+  z-index: 1000;
   display: flex;
   align-items: center;
-  gap: 0.8em; /* Space between textbox and button */
-  width: 40em; /* Match DeepSeek textbox width */
-  max-width: 90%; /* Ensure it doesn't overflow on small screens */
+  gap: 0.8em;
+  width: 40em;
+  max-width: 90%;
 }
 
 .textbox {
-  flex: 1; /* Take up remaining space */
+  flex: 1;
   border: none;
   outline: none;
-  resize: none;
-  font-size: 1em; /* Match DeepSeek font size */
-  font-family: "Arial", sans-serif; /* Match DeepSeek font */
+  resize: none; /* Disable manual resizing */
+  font-size: 1em;
+  font-family: "Arial", sans-serif;
   padding: 0.5em;
-  line-height: 1.5; /* Match DeepSeek line height */
-  max-height: 7.5em; /* Maximum height for 5 lines */
-  overflow-y: auto; /* Enable scrolling for long messages */
-  background: transparent; /* Transparent background */
-  border-radius: 0.5em; /* Rounded corners for textarea */
+  line-height: 1.5; /* Line height for consistent row height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 7.5em; /* Maximum height for 5 rows (1.5em line-height * 5 rows) */
+  background: transparent;
+  border-radius: 0.5em;
+  transition: height 0.2s ease-in-out; /* Smooth height transition */
+  height: 2.25em; /* Initial height for 1.5 lines (1.5em line-height * 1.5 rows) */
 }
 
 .textbox::placeholder {
-  color: #999; /* Placeholder text color */
-}
-
-.send-btn {
-  background: #007bff; /* DeepSeek send button color */
-  color: white;
-  border: none;
-  border-radius: 0.5em; /* Rounded corners */
-  padding: 0.5em 1em;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.send-btn:hover {
-  background: #0056b3; /* Darker shade on hover */
+  color: #999;
 }
